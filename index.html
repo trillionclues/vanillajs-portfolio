@@ -11,13 +11,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Trillionclues - Portfolio</title>
   </head>
   <body>
     <nav>
-      <h2>Trillionclues</h2>
-      <div>
+      <h1>Trillionclues</h1>
+      <div class="toggle">
         <input type="checkbox" class="checkbox" id="checkbox" />
         <label for="checkbox" class="label">
           <i class="fas fa-moon"></i>
@@ -26,6 +27,59 @@
         </label>
       </div>
     </nav>
+
+    <main>
+      <div class="profile">
+        <p>Hello 👋</p>
+        <h2>I'm Excel Nwachukwu</h2>
+        <p class="bio">
+          I'm a frontend developer passionate for building accessible web and
+          mobile interface solutions. I also advocate for early-stage tech
+          integration in student communities. When I'm not coding, I love
+          sharing my knowledge with others through ontent creation on my tech
+          Blog as well as writing technical articles.
+        </p>
+        <div id="resume">
+          <button><a href="#">Download Resume</a></button>
+        </div>
+      </div>
+
+      <div class="group-modal">
+        <div class="projects">
+          <img src="./images/folder-favorite.svg" alt="projects" />
+          <p>My porjects</p>
+        </div>
+        <div class="about">
+          <img src="./images/user-octagon.svg" alt="profile" />
+          <p>About me</p>
+        </div>
+        <div class="blog">
+          <img src="./images/message-edit.svg" alt="blog" />
+          <p>My Blog</p>
+        </div>
+        <div class="contact">
+          <img src="./images/sms-edit.svg" alt="contact" />
+          <p>Contact me</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="socials">
+        <div class="social-fill">
+          <i class="ai-github-fill"></i>
+        </div>
+        <div class="social-fill">
+          <i class="ai-twitter-fill"></i>
+        </div>
+        <div class="social-fill">
+          <i class="ai-linkedin-fill"></i>
+        </div>
+        <div class="social-fill">
+          <i class="ai-stack-overflow-fill"></i>
+        </div>
+      </div>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>
