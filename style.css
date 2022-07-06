@@ -140,7 +140,7 @@ p {
  margin: 0 0 0 18rem;
 }
 
-.group-modal div {
+.group-modal > div {
  border: 1px solid #f2f2ff;
  border-radius: 5px;
  text-align: center;
@@ -152,8 +152,8 @@ p {
  align-items: center;
 }
 
-.group-modal  div p {
-  font-size: 10px;
+.group-modal  div small {
+  font-size: 14px;
 }
 
 /* modal items */
@@ -170,6 +170,11 @@ p {
 
 .group-modal p {
 color: #f2f2ff;
+}
+
+small {
+  color: #f2f2ff;
+  padding: 10px 20px;
 }
 
 
