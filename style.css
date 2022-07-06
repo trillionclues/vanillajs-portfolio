@@ -119,9 +119,9 @@ p {
  margin: 0 28rem 0 0;
  }
 
-.profile-text p {
-  font-size: 14px;
-}
+ .profile-text p {
+  font-size: 17px;
+ }
 
 
 .bio {
@@ -148,7 +148,7 @@ p {
  border: 1px solid #f2f2ff;
  border-radius: 5px;
  text-align: center;
- padding: 60px 55px;
+ padding: 55px 55px;
  font-size: 20px;
  display: flex;
  flex-direction: column;
