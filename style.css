@@ -223,7 +223,7 @@ footer {
   bottom: 0;
   position: absolute;
   margin-top: 40rem;
-  margin-left: 37rem;
+  margin-left: 38rem;
   /* background-color: wheat; */
 }
 
@@ -239,8 +239,13 @@ footer > div {
 .social-fill {
   background: #111;
   padding: 10px 13px;
-
   border-radius: 100px;
+  cursor: pointer;
+}
+
+.social-fill a {
+  color: #f2f2ff;
+  text-decoration: none;
 }
 
 footer >div:last-of-type {
