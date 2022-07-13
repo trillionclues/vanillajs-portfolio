@@ -13,6 +13,7 @@
     />
     <script src="https://unpkg.com/akar-icons-fonts"></script>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <title>Trillionclues - Portfolio</title>
   </head>
   <body>
@@ -55,7 +56,7 @@
       </div>
 
       <div class="group-modal">
-        <div class="modal">
+        <div class="modal projects" id="open_modal">
           <img
             class="projects"
             src="./images/folder-favorite.svg"
@@ -63,22 +64,24 @@
           />
           <small>Projects</small>
         </div>
-        <div class="modal">
+        <div class="modal profile">
           <img class="about" src="./images/user-octagon.svg" alt="profile" />
           <small>About</small>
         </div>
-        <div class="modal">
+        <div class="modal blog">
           <img class="blog" src="./images/message-edit.svg" alt="blog" />
-          <small>Blog</small>
+          <a href="https://medium.com/@trillionclues" class="modal-link"
+            ><small>Blog</small>
+          </a>
         </div>
-        <div class="modal">
+        <div class="modal contact">
           <img class="contact" src="./images/sms-edit.svg" alt="contact" />
-          <small>Contact</small>
+          <a href="#socials" class="modal-link"><small>Contact</small></a>
         </div>
       </div>
 
       <footer>
-        <div class="socials">
+        <div class="socials" id="socials">
           <div class="social-fill">
             <a href="https://github.com/trillionclues" target="_blank"
               ><i class="ai-github-fill"></i
@@ -109,12 +112,57 @@
     </main>
 
     <!-- modal -->
-    <div class="modal-overlay">
-      <div class="modal-container">
-        <h3>modal content</h3>
-        <button class="close-btn"><i class="fas fa-times"></i></button>
+    <div class="modal_container" id="modal-container">
+      <div class="modal-content">
+        <div class="modal-close close-modal">
+          <i class="fas fa-times"></i>
+        </div>
+        <img
+          src="./images/moviedb-website.png"
+          class="modal-img"
+          alt="projects"
+        />
+
+        <h3 class="modal_title">MovieDB App</h3>
+        <p class="modal_description">
+          A movie application built using a popular rest movie api.
+        </p>
+
+        <button class="modal_button modal_button-width">
+          <a
+            href="https://github.com/trillionclues/streamit-movie-app"
+            class="movie-db"
+            target="_blank"
+          >
+            Demo</a
+          >
+        </button>
+        <button class="modal_button-link close-modal">Close</button>
       </div>
     </div>
+    <!-- modal ends -->
+
+    <!-- modal -->
+    <!-- <div class="mod container">
+      <button class="modal-btn" id="open-modal">Open modal</button>
+      <div class="modal_container" id="modal-container">
+        <div class="modal-content">
+          <div class="modal-close">
+            <i class="fas fa-times"></i>
+          </div>
+          <img
+            src="./images/loruki-website.png"
+            class="modal-img"
+            alt="projects"
+          />
+          <h1 class="modal-title">Loruki</h1>
+          <p>Click the button to close</p>
+
+          <button class="view-click">View Status</button>
+          <button class="view-close">Close</button>
+        </div>
+      </div>
+    </div> -->
 
     <script src="./index.js" defer></script>
   </body>

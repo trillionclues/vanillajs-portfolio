@@ -8,7 +8,9 @@ body {
   height: 100vh;
   width: 100%;
   margin: 0;
-  background-color: #232323;
+  background-color: black;
+
+  position: relative;
 }
 @media screen and (max-width: 480px) {
   nav,
@@ -185,6 +187,11 @@ body {
 /* DESKTOP */
 
 @media screen and (min-width: 1024px) {
+  body.dark {
+    background-color: #232323;
+    position: relative;
+  }
+
   .skills {
     display: none;
   }
@@ -312,7 +319,6 @@ body {
     grid-gap: 20px;
     padding: 70px 95px;
     transform: translate(-50%, -50%);
-    /* background-color: wheat; */
     margin: 0 0 0 18rem;
   }
 
@@ -348,11 +354,23 @@ body {
     color: #f2f2ff;
   }
 
+  .modal {
+    cursor: pointer;
+  }
+
+  .modal:hover {
+    background-color: hsl(240, 16%, 12%);
+  }
+
+  .modal-link {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
   small {
     color: #f2f2ff;
     padding: 10px 20px;
   }
-
   /* BUTTON */
 
   button a {
@@ -436,7 +454,7 @@ body {
 
   /* modal */
 
-  .modal-btn {
+  /* .modal-btn {
     margin-top: 2rem;
     background: #49a6e9;
 
@@ -471,8 +489,7 @@ body {
     background: #f2f2f2;
     border-radius: 0.5rem;
     width: 90vw;
-    height: 30vh;
-    max-width: 620px;
+    height: 90vh;
     text-align: center;
     display: grid;
     place-items: center;
@@ -481,8 +498,8 @@ body {
 
   .close-btn {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: -1rem;
+    right: 0.4rem;
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
@@ -494,6 +511,163 @@ body {
   .close-btn:hover {
     color: hsl(360, 71%, 66%);
     transform: scale(1.3);
+  }
+
+  .firstPrev {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: auto;
+  }
+
+  .drag-crypto {
+    width: 260px;
+    height: auto;
+    border: 5px solid #f2f2f2;
+    border-radius: 10px;
+    background-color: #113049;
+    position: relative;
+    overflow: hidden;
+  } */
+  /* 
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .mod {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  .modal-btn {
+    display: inline-block;
+    background-color: Red;
+    color: white;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+  }
+
+  .modal-btn:hover {
+    background-color: wheat;
+  }
+
+  .modal_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(73, 166, 233, 0.5);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .modal_container button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  .modal-img {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+  } */
+
+  /* MODAL */
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  .modal-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 1000;
+    background-color: hsla(240, 18%, 75%, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    perspective: 1000px;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: rgb(206, 200, 200);
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    border: 1rem 1rem 0 0;
+    transition: all 0.3s;
+    margin: auto;
+    width: 380px;
+
+    /* effect 1 */
+    transform: rotateX(65deg) scale(0.75) translateY(10%);
+    transform-origin: 50% 100%;
+  }
+
+  .modal-img {
+    width: 250px;
+    margin-bottom: 0.75rem;
+  }
+
+  .modal-close {
+    display: inline-flex;
+    background-color: #222222;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+  }
+
+  .modal_title {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .modal_description {
+    margin-bottom: 1.5rem;
+  }
+
+  .modal_button-link {
+    /* background-color: transparent; */
+    background-color: #232323;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .show-modal {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .show-modal .modal-content {
+    /* transform: translateY(0); */
+    transform: rotateX(0) scale(1) translateY(0);
   }
 }
 
