@@ -9,9 +9,13 @@ body {
   width: 100%;
   margin: 0;
   background-color: #1a1a1a;
-
   position: relative;
 }
+
+a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 480px) {
   nav,
   .hello {
@@ -663,15 +667,54 @@ body {
   }
 }
 
-@media only screen and (min-width: 1280px) and (max-width: 1605px) {
+@media only screen and (min-width: 1280px) and (max-width: 1305px) {
   .toggle {
     margin-left: 63rem;
     position: absolute;
   }
 }
 
-@media only screen and (max-width: 768px) and (max-width: 912px) {
+@media screen and (width: 1440px) {
+  .toggle {
+    margin-left: 65rem;
+    position: absolute;
+  }
+
+  .profile-text {
+    top: 24rem;
+    left: 34%;
+    padding: 70px 60px;
+  }
+
+  .profile-text p {
+    padding-right: 70px;
+    font-size: 17px;
+  }
+
+  .group-modal {
+    top: 25rem;
+    left: 58rem;
+    padding: 70px 95px;
+    margin: 0 0 0 18rem;
+  }
+
+  .group-modal > div {
+    padding: 55px 55px;
+  }
+
+  .group-modal div small {
+    font-size: 22px;
+  }
+
+  /* modal items */
+  .group-modal img {
+    width: 60px;
+    height: 55px;
+  }
 }
+
+/* @media only screen and (max-width: 768px) and (max-width: 912px) {
+} */
 
 @media only screen and (max-width: 320px) {
   #profile-img {
