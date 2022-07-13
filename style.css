@@ -8,7 +8,7 @@ body {
   height: 100vh;
   width: 100%;
   margin: 0;
-  background-color: black;
+  background-color: #1a1a1a;
 
   position: relative;
 }
@@ -21,6 +21,10 @@ body {
   main {
     width: 100%;
     height: 100vh;
+  }
+
+  #resume {
+    padding-bottom: 5rem;
   }
 
   .socials {
@@ -69,7 +73,7 @@ body {
   #profile-img {
     position: absolute;
     top: 8rem;
-    right: 2.4rem;
+    right: 2rem;
     height: 300px;
     width: 300px;
     background-size: cover;
@@ -81,7 +85,7 @@ body {
 
   #profile-img img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
   }
 
@@ -89,7 +93,7 @@ body {
     background-color: #f2f2f2;
     position: absolute;
     top: 8rem;
-    right: 2.4rem;
+    right: 2rem;
     height: 300px;
     width: 300px;
     border-radius: 2%;
@@ -181,6 +185,123 @@ body {
     position: absolute;
     top: 15rem;
     right: 2rem;
+  }
+
+  /* hide select elements */
+  .profile,
+  .blog,
+  .contact,
+  small {
+    display: none;
+  }
+
+  .projects {
+    position: relative;
+    /* left: -22px; */
+    top: 2px;
+    background-color: #d9d9d9;
+    padding: 0.4rem;
+    width: 68px;
+    height: 68px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px 4px rgba(255, 237, 163, 0.2);
+    cursor: pointer;
+  }
+
+  .projects img {
+    position: absolute;
+    left: 10px;
+    width: 50px;
+    background-color: transparent;
+  }
+
+  /* MODAL */
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  .modal-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 1000;
+    background-color: hsla(240, 18%, 75%, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    perspective: 1000px;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: rgb(206, 200, 200);
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    border: 1rem 1rem 0 0;
+    transition: all 0.3s;
+    margin: auto;
+    width: 380px;
+
+    /* effect 1 */
+    transform: rotateX(65deg) scale(0.75) translateY(10%);
+    transform-origin: 50% 100%;
+  }
+
+  .modal-img {
+    width: 250px;
+    margin-bottom: 0.75rem;
+  }
+
+  .modal-close {
+    display: inline-flex;
+    background-color: #222222;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+  }
+
+  .modal_title {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .modal_description {
+    margin-bottom: 1.5rem;
+  }
+
+  .modal_button-link {
+    /* background-color: transparent; */
+    background-color: #232323;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .show-modal {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .show-modal .modal-content {
+    /* transform: translateY(0); */
+    transform: rotateX(0) scale(1) translateY(0);
   }
 }
 
@@ -308,7 +429,7 @@ body {
     margin-top: 0;
   }
 
-  /* MODAL */
+  /* GROUP MODAL */
   .group-modal {
     margin: 0 auto;
     position: absolute;
@@ -452,135 +573,6 @@ body {
     align-items: center;
   }
 
-  /* modal */
-
-  /* .modal-btn {
-    margin-top: 2rem;
-    background: #49a6e9;
-
-    border-color: #49a6e9;
-    color: #f2f2f2;
-  }
-
-  .modal-btn:hover {
-    background: transparent;
-    color: #49a6e9;
-  }
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(73, 166, 233, 0.5);
-    display: grid;
-    place-items: center;
-    transition: all 0.3s linear;
-    visibility: hidden;
-    z-index: -10;
-  }
-
-  .open-modal {
-    visibility: visible;
-    z-index: 10;
-  }
-
-  .modal-container {
-    background: #f2f2f2;
-    border-radius: 0.5rem;
-    width: 90vw;
-    height: 90vh;
-    text-align: center;
-    display: grid;
-    place-items: center;
-    position: relative;
-  }
-
-  .close-btn {
-    position: absolute;
-    top: -1rem;
-    right: 0.4rem;
-    font-size: 2rem;
-    background: transparent;
-    border-color: transparent;
-    color: hsl(360, 67%, 44%);
-    transition: all 0.3s linear;
-    cursor: pointer;
-  }
-
-  .close-btn:hover {
-    color: hsl(360, 71%, 66%);
-    transform: scale(1.3);
-  }
-
-  .firstPrev {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    height: auto;
-  }
-
-  .drag-crypto {
-    width: 260px;
-    height: auto;
-    border: 5px solid #f2f2f2;
-    border-radius: 10px;
-    background-color: #113049;
-    position: relative;
-    overflow: hidden;
-  } */
-  /* 
-  .container {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .mod {
-    height: 100vh;
-    display: grid;
-    place-items: center;
-  }
-
-  .modal-btn {
-    display: inline-block;
-    background-color: Red;
-    color: white;
-    padding: 1rem 1.25rem;
-    border-radius: 0.5rem;
-    transition: 0.3s;
-  }
-
-  .modal-btn:hover {
-    background-color: wheat;
-  }
-
-  .modal_container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(73, 166, 233, 0.5);
-    width: 100%;
-    height: 100%;
-    display: grid;
-    align-items: flex-end;
-    overflow: hidden;
-  }
-
-  .modal_container button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-  }
-
-  .modal-img {
-    max-width: 100%;
-    height: auto;
-    transition: all 0.3s;
-    visibility: hidden;
-    opacity: 0;
-  } */
-
   /* MODAL */
   button {
     cursor: pointer;
@@ -671,5 +663,32 @@ body {
   }
 }
 
-@media only screen and (min-width: 1370px) and (max-width: 1605px) {
+@media only screen and (min-width: 1280px) and (max-width: 1605px) {
+  .toggle {
+    margin-left: 63rem;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 912px) {
+}
+
+@media only screen and (max-width: 320px) {
+  #profile-img {
+    right: -2rem;
+  }
+
+  #img-index {
+    right: -2rem;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 425px) {
+  #profile-img {
+    right: 3.5rem;
+  }
+
+  #img-index {
+    right: 3.5rem;
+  }
 }
